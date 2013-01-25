@@ -2,9 +2,17 @@
 <html>
 	<head>
 		<title>Actual Fitness Network</title>
-		<link href='http://fonts.googleapis.com/css?family=Exo:500,500italic|Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Exo:800,800italic|Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
 		<link href="css/reset.css" type="text/css" rel="stylesheet">
 		<link href="css/main.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fitvids.min.js"></script>
+		<script>
+		  $(document).ready(function(){
+		    // Target your .container, .wrapper, .post, etc.
+		    $("#video").fitVids();
+		  });
+		</script>
 		
 		<!-- Open Graph tags -->
 		<meta property="og:title" content="Actual Fitness" />
@@ -24,41 +32,51 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 		<header class="clearfix">
-			<a href="#" id="logo">Logo</a>
 			<nav>
 				<a href="#facility">The Facility</a>
+				<em>/</em>
 				<a href="#">The Trainers</a>
+				<em>/</em>
 				<a href="#update">Stay Updated</a>
+				<em>/</em>
 				<a href="#book" id="book">Book</a>
 			</nav>
-		</header>
-		<div id="content">
 			<section id="billboard">
 				<h1>Actual Fitness</h1>
+				<p>A fitness facility built for trainers and trainees.</p>
 			</section>
-			<section id="subText">
-				<p>Actual Fitness is a facility that is built for Trainers and their clients. Freakin' Finally.</p>
-			</section>
-			<section id="facility">
+		</header>
+		<div id="content">
+			<section id="facility" class="clearfix">
 				<h1 class="sectionTitle"><span>About the </span>Facility</h1>
-				<img src="http://placehold.it/600x300" id="map">
-				<div id="roomDescriptions" class="clearfix">
-					<div class="column">
-						<h1>Actual Fitness 1</h1>
-						<p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem.</p>
-					</div> 
-					<div class="column">
-						<h1>Actual Fitness 2</h1>
-						<p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem.</p>
-					</div> 
-					<div class="column">
-						<h1>Prison Yard</h1>
-						<p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem.</p>
-					</div> 
+				<div id="facilityContentWrapper">
+					<img src="images/map.png" id="map">
+					<div id="roomDescriptions" class="clearfix">
+						<div class="column">
+							<h1>Actual Fitness 1</h1>
+							<p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem.</p>
+						</div> 
+						<div class="column">
+							<h1>Actual Fitness 2 <span id="construction">Under Construction</span></h1>
+							<p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem.</p>
+						</div> 
+						<div class="column">
+							<h1>Prison Yard</h1>
+							<p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem.</p>
+						</div> 
+					</div>
+				</div>
 			</section>
-			<section id="update">
+			<section id="video"> 
+				<h1 class="sectionTitle"><span>Watch and </span>Be Amazed</h1>
+				<div id="videoWrapper">
+					<iframe width="853" height="480" src="http://www.youtube.com/embed/a-2OuFWEb3A" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</section>
+			
+			<!--<section id="update">
 				<h1 class="sectionTitle"><span>Stay</span>Up-to-date</h1>
-				<!-- Begin MailChimp Signup Form -->
+				<!-- Begin MailChimp Signup Form 
 				<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 				<div id="mc_embed_signup">
 				<form action="http://banditfitness.us2.list-manage.com/subscribe/post?u=53640169200df39be8e3cd2b5&amp;id=9df633e814" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -72,10 +90,30 @@
 					<div class="fb-like" data-href="http://facebook.com/ActualFitness" data-send="false" data-width="150" data-show-faces="false"></div>
 				</div>
 				
-				<!--End mc_embed_signup-->
-			</section>
+				<!--End mc_embed_signup
+			</section>-->
 			<section id="book">
 				<h1 class="sectionTitle"><span>Go ahead </span>Book a class</h1>
+				<div class="classWrapper">
+					<table>
+						<tbody>
+							<tr>
+								<td class="classTitle">Prison Yard</td>
+								<td>Tuesday - Thursday</td>
+								<td>6 PM</td>
+								<td>1 hour</td>
+								<td id="signUp"><a href="#">Sign up!</a></td>
+								<td id="moreInfo"><a href="#">More Info</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h6>More Coming Soon!</h6>
+				<a href="#" id="trainerLink">
+					<div id="trainerWrapper">
+						<h6>Want to teach a class? <b>Contact us</b>.</h6>
+					</div>
+				</a>
 			</section>
 			<footer>
 				footer
