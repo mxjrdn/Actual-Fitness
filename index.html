@@ -3,17 +3,10 @@
 	<head>
 		<title>Actual Fitness Network</title>
 		<link href='http://fonts.googleapis.com/css?family=Exo:800,800italic|Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+		<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 		<link href="css/reset.css" type="text/css" rel="stylesheet">
 		<link href="css/main.css" type="text/css" rel="stylesheet">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.fitvids.min.js"></script>
-		<script>
-		  $(document).ready(function(){
-		    // Target your .container, .wrapper, .post, etc.
-		    $("#video").fitVids();
-		  });
-		</script>
-		
+		<meta content="width=device-width; initial-scale=1.0;" name="viewport">
 		<!-- Open Graph tags -->
 		<meta property="og:title" content="Actual Fitness" />
 		<meta property="og:type" content="website" />
@@ -33,13 +26,11 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 		<header class="clearfix">
 			<nav>
-				<a href="#facility">The Facility</a>
+				<a href="#facility">Facility</a>
 				<em>/</em>
-				<a href="#">The Trainers</a>
+				<a href="#video">Video</a>
 				<em>/</em>
-				<a href="#update">Stay Updated</a>
-				<em>/</em>
-				<a href="#book" id="book">Book</a>
+				<a href="#book">Take a class</a>
 			</nav>
 			<section id="billboard">
 				<h1>Actual Fitness</h1>
@@ -68,7 +59,7 @@
 				</div>
 			</section>
 			<section id="video"> 
-				<h1 class="sectionTitle"><span>Watch and </span>Be Amazed</h1>
+				<h1 class="sectionTitle"><span>Watch the </span>Video</h1>
 				<div id="videoWrapper">
 					<iframe width="853" height="480" src="http://www.youtube.com/embed/a-2OuFWEb3A" frameborder="0" allowfullscreen></iframe>
 				</div>
@@ -76,15 +67,7 @@
 			
 			<!--<section id="update">
 				<h1 class="sectionTitle"><span>Stay</span>Up-to-date</h1>
-				<!-- Begin MailChimp Signup Form 
-				<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-				<div id="mc_embed_signup">
-				<form action="http://banditfitness.us2.list-manage.com/subscribe/post?u=53640169200df39be8e3cd2b5&amp;id=9df633e814" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<label for="mce-EMAIL">Get the newsletter</label>
-					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-					<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-				</form>
-				</div>
+				
 				
 				<div id="socialButtons">
 					<div class="fb-like" data-href="http://facebook.com/ActualFitness" data-send="false" data-width="150" data-show-faces="false"></div>
@@ -94,7 +77,7 @@
 			</section>-->
 			<section id="book">
 				<h1 class="sectionTitle"><span>Go ahead </span>Book a class</h1>
-				<div class="classWrapper">
+				<div class="classWrapper clearfix">
 					<table>
 						<tbody>
 							<tr>
@@ -111,13 +94,47 @@
 				<h6>More Coming Soon!</h6>
 				<a href="#" id="trainerLink">
 					<div id="trainerWrapper">
-						<h6>Want to teach a class? <b>Contact us</b>.</h6>
+						<h6>Want to teach a class? <b>Contact us &rarr;</b></h6>
 					</div>
 				</a>
 			</section>
-			<footer>
-				footer
+			<footer class="clearfix">
+				<div class="footerSection">
+					<h1>Actual Fitness</h1>
+				</div>
+				<div class="footerSection">
+					<h6>Location</h6>
+					<p>1990 S. Belcher Rd.<br>Largo, FL<br>33771</p>
+					<p><a href="#">Map &rarr;</a></p>
+				</div>
+				<div class="footerSection">
+					<h6>Be social</h6>
+					<a href="http://facebook.com/ActualFitness"><img src="images/icons/facebook@2x.png" width="32" height="32"></a>
+					<a href="http://facebook.com/ActualFitness"><img src="images/icons/twitter@2x.png" width="32" height="32"></a>
+					<a href="http://facebook.com/ActualFitness"><img src="images/icons/youtube@2x.png" width="32" height="32"></a>
+				</div>
+				<div class="footerSection" id="email">
+					<h6>Sign up for the Newsletter</h6>
+					<!-- Begin MailChimp Signup Form -->
+					
+					<div id="mc_embed_signup" class="clearfix">
+					<form action="http://banditfitness.us2.list-manage.com/subscribe/post?u=53640169200df39be8e3cd2b5&amp;id=9df633e814" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					</form>
+					</div>
+					<!-- End MailChimp Signup Form -->
+				</div>
 			</footer>
 		</div>
 	</body>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fitvids.min.js"></script>
+		<script type="text/javascript" src="js/retina.js"></script>
+		<script>
+		  $(document).ready(function(){
+		    // Target your .container, .wrapper, .post, etc.
+		    $("#video").fitVids();
+		  });
+		</script>
 </html>

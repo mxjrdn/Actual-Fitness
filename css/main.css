@@ -15,12 +15,11 @@ header {
 	background-image: url(../images/headerbg2.jpg);
 	background-position: left top;
 	background-repeat: no-repeat;
-	padding: 30px 0;
-	position: fixed;
+	padding: 0px 0 0 0;
+	position: relative;
 	z-index: 1;
 	width: 100%;
 	height: 500px;
-	box-shadow: 0px 1px 6px rgba(0,0,0,.8);
 	text-align: center;
 }
 header a {
@@ -44,13 +43,12 @@ header nav em {
 	color: #aaa;
 }
 #content {
-	top: 485px;
+	top: 0;
 	z-index: 2;
 	position: relative;
-	background-image: url(../images/white_brick_wall.png);
+	background-image: url(/.images/white_brick_wall.png);
 	background-position: center top;
 	background-repeat: repeat;
-	box-shadow: 0px -1px 26px rgba(0,0,0,.8), inset 0px 1px 0px 1px rgba(255,255,255,.1);
 }
 section {
 	padding:  5%;
@@ -101,8 +99,8 @@ h1.sectionTitle span {
 #facility {
 	z-index: 3;
 	position: relative;
-	background: ;
-	box-shadow: 0px 4px 0px rgba(0,0,0,.1);
+	background: white;
+	box-shadow: 0px 0px 26px rgba(0,0,0,1);
 	
 	/*background-color: #333;
 	background-image: url(../images/inflicted.png);
@@ -123,7 +121,7 @@ h1.sectionTitle span {
 }
 #facility #roomDescriptions {
 	float: right;
-	margin: 10% 0 0 5%;
+	margin: 5% 0 0 5%;
 	width: 50%;
 }
 #facility #roomDescriptions .column {
@@ -147,12 +145,13 @@ span#construction {
 	background-image: url(../images/videobg1.jpg);
 	background-size: cover;
 	color: white;
+	position: relative;
+	z-index: 2;
 	text-shadow: 0px 0px 10px rgba(0,0,0,1);
-	box-shadow: inset 0px 0px 10px rgba(0,0,0,1);
 }
 #videoWrapper {
 	margin: 5% auto;
-	box-shadow: 0px 0px 10px rgba(0,0,0,1);
+	box-shadow: 0px 0px 26px rgba(0,0,0,1);
 	max-width: 853px;
 }
 section#book {
@@ -214,66 +213,240 @@ section#book {
 #update {
 }
 #mc_embed_signup {
-	background:transparent;  
+	background: transparent;  
 	position: relative;
 	display: block;
-	margin: 50px auto;
+	margin: 0px;
 	height: auto;
-	width: 500px;
+	padding: 0;
+	width: 100%;
 	text-align: center;
 	font-family: "Exo", sans-serif;
+}
+#mc_embed_signup form {
+	display: block;
+	position: relative;
+	text-align: left;
+	padding: 0;
 }
 #mc_embed_signup label {
 	text-align: center;
 	}
 #mc_embed_signup input#mce-EMAIL.email {
-	background: #eee;
+	background: #444;
 	font-family: "Open Sans", sans-serif;
 	display: block;
-	border: none;
+	border: 0;
 	outline: none;
-	font-size: 20px;
-	line-height: 20px;
-	padding: 17px 20px;
-	width: 300px;
+	font-size: 14px;
+	line-height: 1em;
+	padding: 15px 5%;
+	width: 60%;
+	height: 14px;
 	margin: 0;
-	position: absolute;
+	position: relative;
+	float: left;
+	clear: none;
 	left: 0;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-radius: 0;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	box-shadow: inset 0px 0px 0px 2px #555;
 	-webkit-transition: .2s linear all;
 }
 #mc_embed_signup input#mce-EMAIL.email:focus {
-	box-shadow: inset 0px 0px 0px 4px #333;
+	color: white;
+	box-shadow: inset 0px 0px 0px 2px white;
 }
 #mc_embed_signup input#mc-embedded-subscribe.button {
-	position: absolute;
-	font-family: "Exo", sans-serif;
-	background: #c91b00;
+	position: relative;
+	font-family: "Open Sans", sans-serif;
+	background: #555;
 	display: block;
 	right: 0;
-	font-size: 20px;
-	line-height: 20px;
-	padding: 20px;
+	font-size: 14px;
+	line-height: 14px;
+	padding: 15px 5%;
 	height: auto;
-	width: 160px;
+	width: 30%;
+	float: left;
+	clear: none;
 	margin: 0;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-radius: 0;
+	border-bottom-right-radius: 6px;
+	border-top-right-radius: 6px;
 	-webkit-transition: .1s ease-out;
 }
 #mc_embed_signup input#mc-embedded-subscribe.button:hover {
-	background-color: #f72200;
+	background-color: white;
+	color: #333;
 }
 footer {
 	background: #333;
-	color: white;
+	color: #ddd;
 	padding: 30px;
+}
+footer p a {
+	color: white;
+	background: rgba(255,255,255,.1);
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+footer p a:hover {
+	background: white;
+	color: #333;
+}
+.footerSection {
+	width: 16%;
+	margin: 2% 2% 2% 2%;
+	padding: 0 0 0 0%;
+	overflow: visible;
+	float: left;
+	position: relative;
+}
+.footerSection#email {
+	width: 36%;
+}
+.footerSection h1 {
+	text-transform: uppercase;
+	font-size: 36px;
+}
+.footerSection h6 {
+	margin-bottom: 6px;
+}
+.footerSection a img {
+	border-radius: 16px;
+	-webkit-transition: all .2s linear;
+}
+.footerSection a:hover img {
+	border-radius: 16px;
+	box-shadow: 0px 0px 0px 3px white;
 }
 @media screen and (min-width:960px) {
 	html {
 		font-size: ;
+	}
+}
+@media screen and (max-width:960px) {
+	#facility #facilityContentWrapper {
+		width: auto;
+		margin: 0;
+	}
+	section#book {
+	}
+	#book .classWrapper {
+		margin: 50px 0;
+	}
+	#book .classWrapper table {
+		width: 44%;
+		float: none;
+		margin: 3% auto;
+	}
+	#book .classWrapper table tbody tr {
+		
+	}
+	#book .classWrapper table tr td {
+		width: 90%;
+		display: block;
+		padding: 5%;
+		text-align: left;
+		vertical-align: middle;
+		border-bottom: 1px solid #910000;
+	}
+	#book .classWrapper table tr td:last-child {
+		border: none;
+	}
+	#book .classWrapper table tr td a {
+		text-align: center;
+		width: auto;
+	}
+	#book .classWrapper table tr td.classTitle {
+		width: 90%;
+	}
+	#book #trainerWrapper {
+
+	}
+	#book a#trainerLink {
+		width: 80%;
+	}
+	#book #trainerWrapper:hover b {
+	}
+	footer .footerSection,
+	footer .footerSection#email {
+		width: 100%;
+		max-width: 300px;
+		margin: 50px auto;
+		float: none;
+		text-align: center;
+	}
+}
+@media screen and (max-width:768px) {
+	#facility img#map {
+		width: auto;
+		max-width: 80%;
+		margin: 50px auto;
+		float: none;
+	}
+	#facility #roomDescriptions {
+		width: 100%;
+		float: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+@media screen and (max-width:568px) {
+	header {
+		height: auto;
+		background-size: cover;
+	}
+	header nav {
+		margin: 0px;
+		width: 100%;
+		background: rgba(0,0,0,.3);
+		padding: 10px 0;
+	}
+	header nav a {
+		padding: 0px;
+		margin: 0 5px;
+		border-radius: 4px;
+	}
+	header nav em {
+		display: ;
+	}
+	#billboard {
+		margin: 0;
+		padding: 5%;
+	}
+	#billboard h1 {
+		font-size: 65px;
+		margin: 20px;
+	}
+	#billboard p {
+		margin: 20px;
+	}
+	h1.sectionTitle {
+		border: none;
+	}
+	#book .classWrapper table {
+		width: 94%;
+	}
+	#facility img#map {
+		max-width: 200px;
+	}
+	#mc_embed_signup input#mce-EMAIL.email {
+		width: 88%;
+		padding: 5%;
+		margin: 1%;
+		float: none;
+		display: inline-block;
+		border-radius: 6px;
+	}
+	#mc_embed_signup input#mc-embedded-subscribe.button {
+		width: 100%;
+		padding: 5%;
+		margin: 0%;
+		float: none;
+		display: inline-block;
+		border-radius: 6px;
 	}
 }
